@@ -398,6 +398,12 @@ address{
     margin-right: 2%;
 }
 
+.info-contact a{
+    text-decoration: none;
+    color: #000;
+
+}
+
 /* FOOTER */
 
 footer {
