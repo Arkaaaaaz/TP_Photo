@@ -136,7 +136,7 @@ main {
     margin-right: 10%;
 }
 
-#about h1 {
+#about h2 {
     font-size: 3rem;
     margin-top: 3%;
 }
@@ -153,7 +153,7 @@ main {
 
 #services img {
     width: auto;
-    height: 300px;
+    height: 50vh;
     object-fit: cover;
 }
 
@@ -161,7 +161,7 @@ main {
     padding: 3% 5%;
 }
 
-.div-services h1 {
+.div-services h2 {
     margin-bottom: 1%;
     font-size: 3rem;
 }
@@ -184,6 +184,15 @@ main {
     width: 100%;
 }
 
+
+.div-art,
+.div-bebe,
+.div-event,
+.div-famille,
+.div-mariages {
+    min-height: 50vh;
+}
+
 .contenu-services {
     display: flex;
     flex-direction: column;
@@ -191,13 +200,13 @@ main {
     align-items: center;
 }
 
-.contenu-services h2,
+.contenu-services h3,
 .contenu-services p {
     padding: 2% 2% 0 2%;
 }
 
-.contenu-services h2 {
-    font-size: 2.5rem;
+.contenu-services h3 {
+    font-size: 2.3rem;
     font-weight: 700;
     text-decoration: underline;
 }
@@ -206,24 +215,32 @@ main {
 
 #why {
     background-color: #fff;
-    min-height: 100vh;
-    margin-bottom: 2%;
 }
+
+.titre-why {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.titre-why h2 {
+    font-size: 3rem;
+}
+
+/* GRID DE WHY */
 
 .grid-why {
     display: grid;
     grid-template-areas:
         "HG HG HD HD"
         "BG BG BD BD";
-    gap: 20px;
+    gap: 10%;
     height: 100vh;
 }
 
-/* WHY STRUCTURE */
 .haut-gauche {
-    height: 50vh;
     grid-area: HG;
-    background-color: red;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto;
@@ -232,13 +249,80 @@ main {
 .contentHG {
     grid-column: 1/6;
     grid-row: 1/4;
-    background-color: yellow;
+    background-color: #fff;
+    border-radius: 0 0 20px 0;
 }
 
 .content2HG {
     grid-column: 5/6;
     grid-row: 3/4;
-    background-color: darkorchid;
+    background-color: #f9e6e0;
+    border-radius: 20px;
+}
+
+.haut-droite {
+    grid-area: HD;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.contentHD {
+    grid-column: 1/6;
+    grid-row: 1/4;
+    background-color: #fff;
+    border-radius: 0 0 0 20px;
+}
+
+.content2HD {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: #f9e6e0;
+    border-radius: 20px;
+
+}
+
+.bas-gauche {
+    grid-area: BG;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.contentBG {
+    grid-column: 1/6;
+    grid-row: 1/4;
+    background-color: #fff;
+    border-radius: 0 20px 0 0;
+}
+
+.content2BG {
+    grid-column: 5/6;
+    grid-row: 1/2;
+    background-color: #f9e6e0;
+    border-radius: 20px;
+
+}
+
+.bas-droite {
+    grid-area: BD;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.contentBD {
+    grid-column: 1/6;
+    grid-row: 1/4;
+    background-color: #fff;
+    border-radius: 20px 0 0 0;
+}
+
+.content2BD {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: #f9e6e0;
     border-radius: 20px;
 }
 
@@ -249,7 +333,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw;
+    flex-wrap: wrap;
+    width: 15vw;
 }
 
 .content2HG h2,
@@ -258,7 +343,20 @@ main {
 .content2BD h2 {
     text-align: center;
     font-size: 1.2rem;
+    width: 100%;
+
 }
+
+.contentHG,
+.contentHD,
+.contentBG,
+.contentBD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 .contentHG p,
 .contentHD p,
@@ -266,83 +364,16 @@ main {
 .contentBD p {
     text-align: justify;
     padding: 1rem 1.5rem;
-    margin: 0;
+    width: 50%;
+    /* margin: 0; */
     line-height: 1.6;
-}
-
-.haut-droite {
-    height: 50vh;
-    grid-area: HD;
-    background-color: green;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;
-}
-
-.contentHD {
-    grid-column: 1/6;
-    grid-row: 1/4;
-    background-color: yellow;
-}
-
-.content2HD {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    background-color: darkorchid;
-    border-radius: 20px;
-
-}
-
-.bas-gauche {
-    height: 50vh;
-    grid-area: BG;
-    background-color: blue;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;
-}
-
-.contentBG {
-    grid-column: 1/6;
-    grid-row: 1/4;
-    background-color: yellow;
-}
-
-.content2BG {
-    grid-column: 5/6;
-    grid-row: 1/2;
-    background-color: purple;
-    border-radius: 20px;
-
-}
-
-.bas-droite {
-    height: 50vh;
-    grid-area: BD;
-    background-color: purple;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;
-}
-
-.contentBD {
-    grid-column: 1/6;
-    grid-row: 1/4;
-    background-color: yellow;
-}
-
-.content2BD {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background-color: purple;
-    border-radius: 20px;
 }
 
 /* CONTACT */
 
 #contact {
     background-color: #f9e6e0;
-    height: 50vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -359,6 +390,7 @@ main {
 }
 
 #contact iframe {
+    min-width: 100%;
     margin-top: 2%;
 }
 
@@ -372,7 +404,7 @@ address {
     justify-content: center;
     align-items: center;
     max-width: 50%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .div-contact2 {
@@ -380,15 +412,22 @@ address {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 3%;
 }
 
 .photo-contact {
-    /* margin-left: 10%; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 30%;
+    height: auto;
 }
 
 .info-contact {
-    /* margin-right: 5%; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     width: 30%;
 }
 
@@ -420,13 +459,13 @@ footer img {
     margin-left: auto;
 }
 
-.footer-droite{
+.footer-droite {
     margin-right: 2%;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.footer-gauche{
+.footer-gauche {
     margin-left: 2%;
 }
 
