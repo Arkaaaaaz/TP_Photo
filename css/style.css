@@ -378,7 +378,7 @@ main {
     min-height: 100vh;
 }
 
-.div-titre-contact {
+.div-titre-contact{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -388,19 +388,17 @@ main {
     text-align: center;
 }
 
-.div-titre-contact h2 {
+.div-titre-contact h2{
     padding-bottom: 2%;
     font-size: 3rem;
 }
-
 /* FORMULAIRE */
 
-.info-form {
+.info-form{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-
 form {
     display: flex;
     flex-direction: column;
@@ -427,11 +425,10 @@ select {
     transition: 0.25s;
 }
 
-select {
+select{
     cursor: pointer;
 
 }
-
 input:hover {
     background-color: #fff;
     animation-delay: 0.5s;
